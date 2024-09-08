@@ -1,0 +1,75 @@
+name,test_date,breed,sex,condition,start_side,FCI_Group,FCI_Group1
+Aoife,08/12/2023,Irish Glen Maal Terrier,F,cue,L,Terrier,Terrier
+Asha,15/05/2024,Rhodesian Ridgeback,F,cue,L,Scenthound,Other
+Balou4,28/11/2023,French Bulldog Terrier,M,cue,L,Companion/Toy,Toy
+Bärli,13/12/2023,Irish Glen Maal Terrier,M,control,L,Terrier,Terrier
+Bella7,18/06/2024,Malteser,F,control,L,Companion/Toy,Toy
+Bo,08/12/2023,Border Collie,M,control,R,Sheep/cattledog,Herding
+Cela,23/05/2024,Border Collie,F,control,R,Sheep/cattledog,Herding
+Cindy8,06/06/2024,Jack Russell Terrier,F,control,L,Terrier,Terrier
+Cnox,23/05/2024,Border Collie,F,control,L,Sheep/cattledog,Herding
+Cwinta,23/05/2024,Kooikerhondje,F,cue,L,Retriever,Retriever
+Daisy5,10/05/2024,Golden Retriever,F,cue,R,Retriever,Retriever
+Dante4,28/11/2023,Eurasier,M,cue,L,Spitz/Primitive,Other
+Duana,08/12/2023,Irish Glen Maal Terrier,F,control,R,Terrier,Terrier
+Enya5,13/05/2024,English Setter,F,cue,R,Pointing,Other
+Filibuster,06/05/2024,Collie Rough,F,cue,R,Sheep/cattledog,Herding
+Finne-Failbhe,08/12/2023,Irish Glen Maal Terrier,F,control,R,Terrier,Terrier
+Fiona,15/05/2024,Rhodesian Ridgeback,F,control,L,Scenthound,Other
+Fraeulein_Fanny,27/05/2024,Bichon Frisé,F,control,R,Companion/Toy,Toy
+Grogu,30/11/2023,Continental Spaniel,M,cue,R,Companion/Toy,Toy
+Hailey,04/06/2024,Golden Retriever,F,control,R,Retriever,Retriever
+Happy6,06/05/2024,Golden Retriever,F,control,L,Retriever,Retriever
+Hero,12/12/2023,Whippet,M,control,R,Sighthound,Other
+Hunter2,12/12/2023,Bedlington Terrier,M,control,L,Terrier,Terrier
+Jarvis,18/12/2023,Bernese Mountaindog,M,control,L,Pinscher/Schnauzer,Other
+Kukie,11/12/2023,Border Terrier,F,control,L,Terrier,Terrier
+Leia,12/06/2024,Welsh Corgi (Pembroke),F,control,L,Sheep/cattledog,Herding
+Lina4,12/06/2024,Shetland Sheepdog,F,control,R,Sheep/cattledog,Herding
+Lola9,23/04/2024,Golden Retriever,F,cue,R,Retriever,Retriever
+Loomis,24/05/2024,Golden Retriever,M,control,L,Retriever,Retriever
+Lotta,27/11/2023,Lagotto Romagnolo,F,cue,L,Retriever,Retriever
+Lotte6,29/11/2023,Portuguese Waterhound,F,cue,L,Retriever,Retriever
+Louie3,15/05/2024,Rhodesian Ridgeback,M,cue,R,Scenthound,Other
+Lucy18,30/11/2023,Miniature Poodle,F,cue,R,Companion/Toy,Toy
+Luke4,12/06/2024,Welsh Corgi (Pembroke),M,cue,R,Sheep/cattledog,Herding
+Maggie6,17/06/2024,Whippet,F,cue,R,Sighthound,Other
+Maja6,06/06/2024,Nova Scotia Duck Tolling Retriever,F,cue,R,Retriever,Retriever
+Maybe,01/12/2023,Parson Russel Terrier,F,control,R,Terrier,Terrier
+Miss_Sophie,27/05/2024,Poodle (Miniature),F,cue,L,Companion/Toy,Toy
+Monty8,25/06/2024,Silken Windsprite,M,cue,L,Sighthound,Other
+Naja2,04/06/2024,Golden Retriever,F,cue,L,Retriever,Retriever
+Nelli,07/06/2024,Chihuahua,F,cue,L,Companion/Toy,Toy
+Niya,11/12/2023,Shiba Inu,F,control,R,Spitz/Primitive,Other
+Ohana_Jolani,23/05/2024,Border Collie,F,cue,L,Sheep/cattledog,Herding
+Paige,21/12/2023,Scottish terrier,F,cue,L,Terrier,Terrier
+Paul3,25/11/2023,Whippet,M,cue,L,Sighthound,Other
+Peggy3,22/05/2024,Cocker Spaniel,F,control,R,Retriever,Retriever
+Pia,29/11/2023,Whippet,F,cue,R,Sighthound,Other
+Pixi,12/06/2024,Fox Terrier,F,cue,R,Terrier,Terrier
+poldi,18/12/2023,Barbet,F,control,R,Retriever,Retriever
+Poppy3,04/06/2024,Dachshound (Miniature Smooth Haired),F,control,L,Dachshund,Other
+Principessa,17/06/2024,Whippet,F,control,R,Sighthound,Other
+Quinlan,03/06/2024,Golden Retriever,M,control,R,Retriever,Retriever
+Quintus,23/11/2023,Hovawart,M,cue,R,Pinscher/Schnauzer,Other
+Resi,13/05/2024,English Setter,F,control,R,Pointing,Other
+Rose,01/12/2023,Fox Terier,M,control,R,Terrier,Terrier
+Rovina,16/12/2023,Scottish Terrier,F,control,R,Terrier,Terrier
+Rudi2,28/11/2023,Parson Russel Terrier,M,cue,R,Terrier,Terrier
+Samba2,29/06/2024,Australien Shepherd,M,control,L,Sheep/cattledog,Herding
+Samira,17/11/2023,Yorkshire terrier,F,cue,R,Terrier,Terrier
+Sammy11,30/11/2023,Parson Russel Terrier,M,cue,L,Terrier,Terrier
+Sixtus,13/06/2024,Petit Brabançon,M,cue,R,Companion/Toy,Toy
+Socke3,27/06/2024,American Staffordshire Terrier,F,cue,L,Terrier,Terrier
+Sophi,08/12/2023,West Highland Terrier,F,control,L,Terrier,Terrier
+Stella5,10/06/2024,Labrador Retriever,F,cue,R,Retriever,Retriever
+Tali,17/06/2024,American Staffordshire Terrier,F,cue,L,Terrier,Terrier
+Tilda2,19/06/2024,Welsh Springer Spaniel,F,control,R,Retriever,Retriever
+Toffee5,07/12/2023,Bernese Mountaindog,F,control,L,Pinscher/Schnauzer,Other
+Tofu,25/11/2023,Cocker Spaniel,M,cue,R,Retriever,Retriever
+Travis,09/12/2023,Siberian Husky,M,control,R,Spitz/Primitive,Other
+Viggo,17/04/2024,Poodle (Miniature),M,control,L,Companion/Toy,Toy
+Viktor2,03/06/2024,Magyar Vizsla,M,cue,L,Pointing,Other
+Waleria,16/12/2023,Pinscher ,F,control,L,Pinscher/Schnauzer,Other
+Yari2,19/12/2023,Rusian Toy Terrier,M,control,R,Companion/Toy,Toy
+Zorah,17/06/2024,American Staffordshire Terrier,F,control,L,Terrier,Terrier

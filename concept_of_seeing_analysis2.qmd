@@ -17,155 +17,11 @@ source("./functions/diagnostic_fcns.r")
 #load("workspace/concept_of_seeing.RData")
 ```
 
-* load demographics
+* load data
 
 
 ```{r}
-# Read the data
-demo_age_data <- read.csv(file = "data/concept_of_seeing_age.csv")%>%
-  select(Subject = Name, birth_date, test_date, age) %>%
-  mutate(Subject = as.factor(Subject))
-```
-
-
-
-```{r}
-demo.data <- read.csv(file = "data/concept_of_seeing_demographics and counterbalancing2.csv") %>%
-  rename(Subject = name)%>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Baerli" = "B\xe4rli")) %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Poldi" = "poldi")) %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Yari2" = "Yari")) %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Pia3" = "Pia")) %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Toffee5" = "Toffee")) %>%
-  inner_join(demo_age_data)%>%
-  select(-test_date)
-
-
-
-levels(as.factor(demo.data$Subject))
-length(levels(as.factor(demo.data$Subject)))
-```
-* load data including dropouts
-
-```{r}
-#Pauline's data
-loopy.data_pw_all <- read.csv("data/scoringproject_100_Concept_of_Seeing.csv") %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Baerli" = "Bärli")) %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Rose" = "Rosé")) %>%
-  mutate(phase_temp = ifelse(Behaviour == "phase", Value, NA)) %>%
-  mutate(phase = ifelse(is.na(phase_temp), lag(phase_temp), phase_temp)) %>%
-  select(-phase_temp)%>%
-  dplyr::select(Scoring:Value,phase)%>%
-  mutate(duration = Stop - Start) %>%
-  droplevels()
-
-loopy.data_mm_all <- read.csv("data/scoringproject_114__Concept_of_Seeing2.csv") %>%
-  mutate(phase_temp = ifelse(Behaviour == "phase", Value, NA)) %>%
-  mutate(phase = ifelse(is.na(phase_temp), lag(phase_temp), phase_temp)) %>%
-  select(-phase_temp)%>%
-  dplyr::select(Scoring:Value,phase)%>%
-  mutate(duration = Stop - Start) 
-
-
-loopy.data_all <- loopy.data_pw_all %>%
-  full_join(loopy.data_mm_all) %>%
-  filter(Subject != "Resi")#Resi is excluded due hearing problems / deafness
-
-length(levels(as.factor(loopy.data_all$Subject)))
-```
-
-
-
-
-* load test phase loopy data
-
-```{r}
-#Pauline's data
-loopy.data_pw <- read.csv("data/scoringproject_100_Concept_of_Seeing.csv") %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Baerli" = "Bärli")) %>%
-  mutate(Subject = fct_recode(as.factor(Subject), "Rose" = "Rosé"),
-       #  Subject = fct_recode(as.factor(Subject), "Yari2" = "Yari"),
-       #  Subject = fct_recode(as.factor(Subject), "Toffee5" = "Toffee")
-       ) %>%
-  mutate(phase_temp = ifelse(Behaviour == "phase", Value, NA)) %>%
-  mutate(phase = ifelse(is.na(phase_temp), lag(phase_temp), phase_temp)) %>%
-  select(-phase_temp)%>%
-  dplyr::select(Scoring:Value,phase)%>%
-  mutate(duration = Stop - Start) %>%
-  inner_join(demo.data)%>%
-  filter(condition != "pilot")%>%
-  droplevels()
-
-
-for (i in 2:nrow(loopy.data_pw)) {
-  loopy.data_pw$phase[i] <- ifelse(loopy.data_pw$Behaviour[i] == "phase", loopy.data_pw$Value[i], loopy.data_pw$phase[i-1])
-}
-
-#make sure that the coding for each participant starts with phase:
-loopy.data_pw %>%
-  group_by(Subject) %>%
-  slice_min(Start, with_ties = FALSE) %>%
-  ungroup()  # Ungroup after filtering
-
-levels(as.factor(loopy.data_pw$Subject))
-levels(as.factor(loopy.data_pw$condition))
-levels(as.factor(loopy.data_pw$phase))
-table(loopy.data_pw$Subject, loopy.data_pw$condition)
-table(loopy.data_pw$Subject, loopy.data_pw$phase)
-length(levels(as.factor(loopy.data_pw$Subject)))
-
-choice_data_pw <- loopy.data_pw %>%
-  filter(Behaviour == "choice", phase == "test")%>%
-  group_by(Subject) %>%
-  slice_min(Start, with_ties = FALSE) %>% #pick the first choice in a trial
-  ungroup() 
-```
-
-```{r}
-#Machteld's data
-loopy.data_mm <- read.csv("data/scoringproject_114__Concept_of_Seeing2.csv") %>%
-  #mutate(Subject = fct_recode(as.factor(Subject), "Baerli" = "Bärli")) %>%
-  #mutate(Subject = fct_recode(as.factor(Subject), "Rose" = "Rosé")) %>%
-  mutate(phase_temp = ifelse(Behaviour == "phase", Value, NA)) %>%
-  mutate(phase = ifelse(is.na(phase_temp), lag(phase_temp), phase_temp)) %>%
-  select(-phase_temp)%>%
-  dplyr::select(Scoring:Value,phase)%>%
-  mutate(duration = Stop - Start) %>%
-  inner_join(demo.data)%>%
-  #filter(condition != "pilot")%>%
-  droplevels()
-
-for (i in 2:nrow(loopy.data_mm)) {
-  loopy.data_mm$phase[i] <- ifelse(loopy.data_mm$Behaviour[i] == "phase", loopy.data_mm$Value[i], loopy.data_mm$phase[i-1])
-}
-
-#make sure that the coding for each participant starts with phase:
-loopy.data_mm %>%
-  group_by(Subject) %>%
-  slice_min(Start, with_ties = FALSE) %>%
-  ungroup()  # Ungroup after filtering
-
-levels(as.factor(loopy.data_mm$Subject))
-levels(as.factor(loopy.data_mm$condition))
-levels(as.factor(loopy.data_mm$phase))
-table(loopy.data_mm$Subject, loopy.data_mm$condition)
-table(loopy.data_mm$Subject, loopy.data_mm$phase)
-length(levels(as.factor(loopy.data_mm$Subject)))
-
-choice_data_mm <- loopy.data_mm %>%
-  filter(Behaviour == "choice", phase == "test") %>%
-  group_by(Subject) %>%
-  slice_min(Start, with_ties = FALSE) %>%
-  ungroup() 
-```
-
-```{r}
-loopy.data <- loopy.data_pw %>%
-  full_join(loopy.data_mm) %>%
-  filter(Subject != "Resi")#Resi is excluded due hearing problems / deafness
-
-length(levels(as.factor(loopy.data$Subject)))
-write.csv(loopy.data, file = "data/concept_of_seeing_test_phase.csv")
+loopy.data<-read.csv(file = "data/concept_of_seeing_test_phase.csv")
 ```
 
 
@@ -224,23 +80,43 @@ choice_data_test <- loopy.data %>%
   slice_min(Start, with_ties = FALSE) %>%
   ungroup() 
 
+table(choice_data_test$condition, choice_data_test$start_side)
+
+choice_data_test.agg2 <- choice_data_test %>%
+  group_by(condition) %>%
+  summarise(N_unseen = sum(Value=="unseen")/(length(Value)))
+
 choice_data_test.agg <- choice_data_test %>%
-  group_by(condition, Behaviour, Value) %>%
+  group_by(condition, Value) %>%
+  summarise(N=n())
+
+choice_data_test.demographics <- choice_data_test %>%
+  group_by(condition) %>%
+  summarise(N = n(),
+            mean_age = mean(age),
+            se_age = sd(age)/(sqrt(length(age))),
+            min_age = min(age),
+            max_age = max(age),
+            n_female = sum(sex=="F"),
+            n_male = sum(sex=="M"))
+
+choice_data_test.fci <- choice_data_test %>%
+  group_by(FCI_Group1) %>%
   summarise(N = n())
 ```
 * plotting choice data
 ```{r}
 choice_plot <-
-  ggplot(data = choice_data_test.agg %>% filter(Behaviour == "choice"),
+  ggplot(data = choice_data_test.agg,
          aes(x = condition, y = N, fill = Value)) +
   geom_bar(stat = "identity", position = position_dodge()) +
   scale_fill_manual(values = c('#999999', '#E69F00'), name = "Choice") +
   scale_y_continuous(breaks = seq(from = 0, to = 30, 4)) +
-  labs(x = NULL) +
-  theme_bw()+
-  theme(legend.position = "right")
+  labs(x = NULL, y = "Number of dogs") +
+  theme_classic()+
+  theme(legend.position = "right", legend.title = element_blank())
 choice_plot
-ggsave(choice_plot, file = "graphics/choice_plot.png", width = 6, height = 6, scale = 0.7)
+ggsave(choice_plot, file = "graphics/choice_plot.png", width = 6, height = 5, scale = 0.7)
 
 ```
 * plotting approach data
@@ -283,6 +159,7 @@ choice_data_test <- choice_data_test %>%
 
 mean(choice_data_test$z.age)
 sd(choice_data_test$z.age)
+length(choice_data_test$z.age)
 ```
 
 
@@ -376,7 +253,9 @@ binom.test(choice_data_test.agg2$sum_unseen[choice_data_test.agg2$condition =="c
 ```{r}
 test_data_latency <- test_data %>%
   filter(Behaviour == "latency_first_choice") %>%
-  rename(latency = duration)
+  rename(latency = duration) %>%
+    mutate(z.age = as.vector(scale(age, center = TRUE, scale = TRUE)))
+
 ```
 
 * plot of latency data
@@ -410,13 +289,13 @@ test_data_latency$latency_log <- log(test_data_latency$latency)
 ```
 * fit linear model
 ```{r}
-latency_lm <- lm(latency_log ~ condition * Value, data = test_data_latency)
+latency_lm <- lm(latency_log ~ condition * Value + sex + z.age, data = test_data_latency)
 diagnostics.plot(latency_lm)
 ```
 --> assumptions violated, use gamma model instead.
 * fit gamma GLM
 ```{r}
-latency_glm <- glm(latency_log ~ condition * Value, data = test_data_latency, family = Gamma(link = "log"))
+latency_glm <- glm(latency_log ~ condition * Value + sex + z.age, data = test_data_latency, family = Gamma(link = "log"))
 
 overdisp.test(latency_glm)
 ```
@@ -433,7 +312,7 @@ drop1(latency_glm, test="Chisq")
 
 * Reduced model without the interaction
 ```{r}
-latency_glm_red <- glm(latency_log ~ condition + Value, data = test_data_latency, family = Gamma(link = "log"))
+latency_glm_red <- glm(latency_log ~ condition + Value + sex + z.age, data = test_data_latency, family = Gamma(link = "log"))
 
 overdisp.test(latency_glm_red)
 ```
@@ -477,92 +356,19 @@ latency_glm_red_output_table <-
     SE = `Std. Error`,
     LowerCI = `2.5 %`,
     UpperCI = `97.5 %`,
-    Chi2 = Deviance,
+    scaled_dev = `scaled dev.`,
     df = Df,
     p = `Pr(>Chi)`,
     t_test = `t value`,
     p_t_test = `Pr(>|t|)`
   ) %>% #
   mutate(across(.cols = c(p), ~ format(round(.x, 3), nsmall = 3))) %>%
-  mutate(across(.cols = c(Estimate:Chi2), ~ format(round(.x, 2), nsmall = 2))) %>%
+  mutate(across(.cols = c(Estimate:scaled_dev), ~ format(round(.x, 2), nsmall = 2))) %>%
   mutate(p = replace(p, p == 0, "<0.001"))
 
 write.csv(latency_glm_red_output_table, file = "saves/latency_analysis_results_table.csv")
 ```
 
-## Reliability analysis
-
-### Load data
-
-```{r}
-#Pauline's data
-loopy.data_reli <- read.csv("data/scoringproject_115_Concept_of_Seeing_reli.csv") %>%
-  mutate(phase_temp = ifelse(Behaviour == "phase", Value, NA)) %>%
-  mutate(phase = ifelse(is.na(phase_temp), lag(phase_temp), phase_temp)) %>%
-  select(-phase_temp)%>%
-  dplyr::select(Scoring:Value,phase)%>%
-  mutate(duration = Stop - Start) %>%
-  inner_join(demo.data)%>%
-  droplevels()
-
-for (i in 2:nrow(loopy.data_reli)) {
-  loopy.data_reli$phase[i] <- ifelse(loopy.data_reli$Behaviour[i] == "phase", loopy.data_reli$Value[i], loopy.data_reli$phase[i-1])
-}
-
-#make sure that the coding for each participant starts with phase:
-loopy.data_reli %>%
-  group_by(Subject) %>%
-  slice_min(Start, with_ties = FALSE) %>%
-  ungroup()  # Ungroup after filtering
-
-levels(as.factor(loopy.data_reli$Subject))
-levels(as.factor(loopy.data_reli$condition))
-levels(as.factor(loopy.data_reli$phase))
-table(loopy.data_reli$Subject, loopy.data_reli$condition)
-table(loopy.data_reli$Subject, loopy.data_reli$phase)
-length(levels(as.factor(loopy.data_reli$Subject)))
-
-choice_data_reli <- loopy.data_reli %>%
-  filter(Behaviour == "choice", phase == "test")%>%
-  group_by(Subject) %>%
-  slice_min(Start, with_ties = FALSE) %>% #pick the first choice in a trial
-  ungroup() %>%
-  select(Scoring, Subject, Behaviour, phase, Value_reli = Value)%>%
-  inner_join(choice_data_test)%>%
-  select(Scoring, Subject, Behaviour, phase, Value_reli, Value)
-
-
-latency_data_reli <- loopy.data_reli %>%
-  filter(Behaviour == "latency_first_choice") %>%
-  rename(latency_reli = duration)%>%
-  select(Scoring, Subject, Behaviour, phase,  Value, latency_reli)%>%
-  inner_join(test_data_latency)%>%
-  select(Scoring, Subject, Behaviour, phase, latency, latency_reli)
-```
-
-### Cohen's kappa
-```{r}
-library(psych)
-
-#calculate Cohen's Kappa
-cohen.kappa(x=cbind(choice_data_reli$Value,choice_data_reli$Value_reli))
-
-
-choice_data_reli %>% summarise(match = sum(Value == Value_reli), non_match = sum(Value != Value_reli))
-
-#proportion of the data set
-nrow(choice_data_reli)/ nrow(choice_data_test)
-```
-```{r}
-library(psych)
-ICC(latency_data_reli%>%dplyr::select(latency, latency_reli), missing=TRUE)
-
-library(irr)
-icc(
-  latency_data_reli%>%dplyr::select(latency, latency_reli), model = "twoway", 
-  type = "consistency", unit = "single"
-  )
-```
 
 ## save workspace
 ```{r}

@@ -1,0 +1,75 @@
+Name ;Date appointment;Owner;Breed;Sex;Condition;Start_side;Test_result;Choice;FCI_Group;choice_num;FCI_Group1
+Aoife;08.12.2023;Gabriella Wetscherek;Irish Glen Maal Terrier;F;Sound_cue;L;included;seen;Terrier;0;Terrier
+Asha;15.05.2024;Florian Pichler;Rhodesian Ridgeback;F;Sound_cue;L;included;unseen;Scenthound;1;Other
+Balou4;28.11.2023;Birgit Derough;French Bulldog Terrier;M;Sound_cue;L;included;seen;Companion/Toy;0;Toy
+Bärli;13.12.2023;Susanne Supka;Irish Glen Maal Terrier;M;Sound_control;L;included;unseen;Terrier;1;Terrier
+Bella7;18.06.2024;Andrea Neuhauser;Malteser;F;Sound_control;L;included;unseen;Companion/Toy;1;Toy
+Bo;08.12.2023;Allesandra Podesta;Border Collie;M;Sound_control;R;included;unseen;Sheep/cattledog;1;Herding
+Cela;23.05.2024;Bettina Falzeder;Border Collie;F;Sound_control;R;included;unseen;Sheep/cattledog;1;Herding
+Cindy8;06.06.2024;Aleksandra Anisimova;Jack Russell Terrier;F;Sound_control;L;included;unseen;Terrier;1;Terrier
+Cnox;23.05.2024;Bettina Falzeder;Border Collie;F;Sound_control;L;included;unseen;Sheep/cattledog;1;Herding
+Cwinta;23.05.2024;Bettina Falzeder;Kooikerhondje;F;Sound_cue;L;included;unseen;Retriever;1;Retriever
+Daisy5;10.05.2024;Klara Kocsis;Golden Retriever;F;Sound_cue;R;included;unseen;Retriever;1;Retriever
+Dante4;28.11.2023;Sepp Hobinger;Eurasier;M;Sound_cue;L;included;seen;Spitz/Primitive;0;Other
+Duana;08.12.2023;Gabriella Wetscherek;Irish Glen Maal Terrier;F;Sound_control;R;included;seen;Terrier;0;Terrier
+Enya5;13.05.2024;Claudia Haas;English Setter;F;Sound_cue;R;included;unseen;Pointing;1;Other
+Filibuster;06.05.2024;Verena;Collie Rough;F;Sound_cue;R;included;unseen;Sheep/cattledog;1;Herding
+Finne-Failbhe;08.12.2023;Gabriella Wetscherek;Irish Glen Maal Terrier;F;Sound_control;R;included;seen;Terrier;0;Terrier
+Fiona;15.05.2024;Florian Pichler;Rhodesian Ridgeback;F;Sound_control;L;included;seen;Scenthound;0;Other
+Fräulein Fanny;27.05.2024;Daniela Aigner;Bichon Frisé;F;Sound_control;R;included;unseen;Companion/Toy;1;Toy
+Grogu;30.11.2023;Senta;Continental Spaniel;M;Sound_cue;R;included;unseen;Companion/Toy;1;Toy
+Hailey;04.06.2024;Daniela Hofmeister;Golden Retriever;F;Sound_control;R;included;unseen;Retriever;1;Retriever
+Happy;23.04.2024;Bernhard Bremer;Golden Retriever;F;Sound_control;L;included;seen;Retriever;0;Retriever
+Hero;12.12.2023;Sabrin Buchinger;Whippet;M;Sound_control;R;included;seen;Sighthound;0;Other
+Hunter2;12.12.2023;Burgi Sedlmayer;Bedlington Terrier;M;Sound_control;L;included;unseen;Terrier;1;Terrier
+Jarvis;18.12.2023;Katharina Moetz;Bernese Mountaindog;M;Sound_control;L;included;seen;Pinscher/Schnauzer;0;Other
+Kukie;11.12.2023;Susanne Kirchner;Border Terrier;F;Sound_control;L;included;seen;Terrier;0;Terrier
+Leia;12.06.2024;Cornelia Deigner;Welsh Corgi (Pembroke);F;Sound_control;L;included;seen;Sheep/cattledog;0;Herding
+Lina4;12.06.2024;Gabriela Schlesinger;Shetland Sheepdog;F;Sound_control;R;included;unseen;Sheep/cattledog;1;Herding
+Lola9;23.04.2024;Bernhard Bremer;Golden Retriever;F;Sound_cue;R;included;unseen;Retriever;1;Retriever
+Loomis;24.05.2024;Ann-Katrin Holik;Golden Retriever;M;Sound_control;L;included;seen;Retriever;0;Retriever
+Lotta;27.11.2023;Elena Neumann;Lagotto Romagnolo;F;Sound_cue;L;included;seen;Retriever;0;Retriever
+Lotte6;29.11.2023;Katharina Mosonyi;Portuguese Waterhound;F;Sound_cue;L;included;unseen;Retriever;1;Retriever
+Louie3;15.05.2024;Florian Pichler;Rhodesian Ridgeback;M;Sound_cue;R;Included;unseen;Scenthound;1;Other
+Lucy18;30.11.2023;Manuela Augustin;Miniature Poodle;F;Sound_cue;R;included;unseen;Companion/Toy;1;Toy
+Luke4;12.06.2024;Cornelia Deigner;Welsh Corgi (Pembroke);M;Sound_cue;R;included;unseen;Sheep/cattledog;1;Herding
+Maggie6;17.06.2024;Edith Soltesz;Whippet;F;Sound_cue;R;included;unseen;Sighthound;1;Other
+Maja6;06.06.2024;Sarah Huber;Nova Scotia Duck Tolling Retriever;F;Sound_cue;R;included;unseen;Retriever;1;Retriever
+Maybe;01.12.2023;Barbara Moeller;Parson Russel Terrier;F;Sound_control;R;included;unseen;Terrier;1;Terrier
+Miss Sophie;27.05.2024;Daniela Aigner;Poodle (Miniature);F;Sound_cue;L;included;unseen;Companion/Toy;1;Toy
+Monty8;25.06.2024;Paula Berg;Silken Windsprite;M;Sound_cue;L;included;unseen;Sighthound;1;Other
+Naya2;04.06.2024;Daniela Hofmeister;Golden Retriever;F;Sound_cue;L;included;seen;Retriever;0;Retriever
+Nelli;07.06.2024;Andrea Neuhauser;Chihuahua;F;Sound_cue;L;included;unseen;Companion/Toy;1;Toy
+Niya;11.12.2023;Jeannine Steiner;Shiba Inu;F;Sound_control;R;included;unseen;Spitz/Primitive;1;Other
+Ohana Jolani;23.05.2024;Sabine Illmayer;Border Collie;F;Sound_cue;L;included;unseen;Sheep/cattledog;1;Herding
+Paige;21.12.2023;Beatrix Schwarz-Neffe;Scottish terrier;F;Sound_cue;L;included;unseen;Terrier;1;Terrier
+Paul3;25.11.2023;Nicole geraline Steiner;Whippet;M;Sound_cue;L;included;unseen;Sighthound;1;Other
+Peggy3;22.05.2024;Barbara Barnucz;Cocker Spaniel;F;Sound_control;R;included;seen;Retriever;0;Retriever
+Pia;29.11.2023;Miriam Kleiter;Whippet;F;Sound_cue;R;included;unseen;Sighthound;1;Other
+Pixi;12.06.2024;Konstanze Sauer;Fox Terrier;F;Sound_cue;R;included;unseen;Terrier;1;Terrier
+poldi;18.12.2023;Lisa Robotka;Barbet;F;Sound_control;R;included;unseen;Retriever;1;Retriever
+Poppy3;04.06.2024;Susanne Muzik;Dachshound (Miniature Smooth Haired);F;Sound_control;L;included;unseen;Dachshund;1;Other
+Principessa;17.06.2024;Edith Soltesz;Whippet;F;Sound_control;R;included;unseen;Sighthound;1;Other
+Quinlan;03.06.2024;Guillian Murray;Golden Retriever;M;Sound_control;R;included;unseen;Retriever;1;Retriever
+Quintus;23.11.2023;Herbert Würzner;Hovawart;M;Sound_cue;R;included;unseen;Pinscher/Schnauzer;1;Other
+Resi;13.05.2024;Claudia Haas;English Setter;F;Sound_control;R;included;seen;Pointing;0;Other
+Rose;01.12.2023;Nikolett Dobo;Fox Terier;M;Sound_control;R;included;seen;Terrier;0;Terrier
+Rovina;16.12.2023;Beatrix Schwarz-Neffe;Scottish Terrier;F;Sound_control;R;included;seen;Terrier;0;Terrier
+Rudi2;28.11.2023;Marion Maly;Parson Russel Terrier;M;Sound_cue;R;included;unseen;Terrier;1;Terrier
+Samba2;29.06.2024;Amanda Previdelli;Australien Shepherd;M;Sound_control;L;included;unseen;Sheep/cattledog;1;Herding
+Samira;17.11.2023;Claudia Roson ;Yorkshire terrier;F;Sound_cue;R;included;unseen;Terrier;1;Terrier
+Sammy11;30.11.2023;Christoph Pollak;Parson Russel Terrier;M;Sound_cue;L;included;seen;Terrier;0;Terrier
+Sixtus;13.06.2024;Elisabeth (Sissy) List;Petit Brabançon;M;Sound_cue;R;included;seen;Companion/Toy;0;Toy
+Socke3;27.06.2024;Selina Maurovick;American Staffordshire Terrier;F;Sound_cue;L;included;seen;Terrier;0;Terrier
+Sophi;08.12.2023;sonja kato-Maliath-pokorny;West Highland Terrier;F;Sound_control;L;included;seen;Terrier;0;Terrier
+Stella5;10.06.2024;Ulrike Huber;Labrador Retriever;F;Sound_cue;R;included;unseen;Retriever;1;Retriever
+Tali;17.06.2024;Nicole Gfrerer/Strasser;American Staffordshire Terrier;F;Sound_cue;L;included;unseen;Terrier;1;Terrier
+Tilda2;19.06.2024;Stephanie Scholz;Welsh Springer Spaniel;F;Sound_control;R;included;unseen;Retriever;1;Retriever
+Toffee;06.12.2023;Susanne Schaaf;Bernese Mountaindog;F;Sound_control;L;included;seen;Pinscher/Schnauzer;0;Other
+Tofu;25.11.2023;Fabiene Moritz;Cocker Spaniel;M;Sound_cue;R;included;unseen;Retriever;1;Retriever
+Travis;09.12.2023;Sandra Maroum-Terhaag;Siberian Husky;M;Sound_control;R;included;unseen;Spitz/Primitive;1;Other
+Viggo;17.04.2024;Evelyn Fischer;Poodle (Miniature);M;Sound_control;L;included;seen;Companion/Toy;0;Toy
+Viktor2;03.06.2024;Resi Meinhart;Magyar Vizsla;M;Sound_cue;L;included;unseen;Pointing;1;Other
+Waleria;16.12.2023;Claudia Schnabl;Pinscher ;F;Sound_control;L;included;seen;Pinscher/Schnauzer;0;Other
+Yari;19.12.2023;Stefanie Riemer;Rusian Toy Terrier;M;Sound_control;R;included;seen;Companion/Toy;0;Toy
+Zorah;17.06.2024;Nicole Gfrerer/Strasser;American Staffordshire Terrier;F;Sound_control;L;included;unseen;Terrier;1;Terrier
